@@ -1,0 +1,22 @@
+
+    digraph xtext {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+140508095292864 -> 140508095414400 [label="fields:0" arrowtail=diamond dir=both]
+140508095414400[label="{name:Field|+type:str='text'\lrequired:list=[]\l}"]
+140508095292864 -> 140508095414848 [label="fields:1" arrowtail=diamond dir=both]
+140508095414848[label="{date:Field|+type:str='date'\lrequired:list=[]\l}"]
+140508095292864 -> 140508095414904 [label="fields:2" arrowtail=diamond dir=both]
+140508095414904[label="{email:Field|+type:str='email'\lrequired:list=[]\l}"]
+140508095292864[label="{formulario:FormModel|}"]
+
+}

@@ -1,0 +1,22 @@
+/*
+  Entity DSL grammar.
+*/
+
+FormModel: 
+  'Create' name=ID 
+  fields*=Field
+;
+
+Field:  
+     'add' type=[FieldType] name=ID
+     ('required' required='1')*
+;
+
+FieldType:
+  'text'|'int'|'date'| 'select' | 'check' | 'email'
+;
+
+// Special rule for comments. Comments start with //
+Comment:
+    /\/\/.*$/
+;

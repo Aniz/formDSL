@@ -1,0 +1,47 @@
+
+    digraph xtext {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+94372935124792 -> 94372935126776[arrowtail=diamond, dir=both, headlabel="fields 0..*"]
+94372935124792[ label="{FormModel|+name:ID\l}"]
+
+94372935128760[ label="{FieldType|text\|int\|date\|select\|check\|email}"]
+
+94372935126776[ label="{Field|+type:FieldType\l+name:ID\lrequired:list[STRING]\l}"]
+
+94372935133576[ label="{Comment|\\/\\/.*$}"]
+
+94372934915208[ label="{FLOAT|}"]
+
+94372934909416[ label="{BOOL|}"]
+
+94372934924280[ label="{*OBJECT|}"]
+94372934924280 -> 94372934921384 [dir=back]
+
+94372934912312[ label="{INT|}"]
+
+94372934905016[ label="{ID|}"]
+
+94372934907000[ label="{STRING|}"]
+
+94372934921384[ label="{BASETYPE|}"]
+94372934921384 -> 94372934918104 [dir=back]
+94372934921384 -> 94372934909416 [dir=back]
+94372934921384 -> 94372934905016 [dir=back]
+94372934921384 -> 94372934907000 [dir=back]
+
+94372934918104[ label="{NUMBER|}"]
+94372934918104 -> 94372934915208 [dir=back]
+94372934918104 -> 94372934912312 [dir=back]
+
+
+}
