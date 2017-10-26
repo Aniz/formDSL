@@ -70,8 +70,8 @@ def main(debug=False):
         if component.__class__.__name__ == 'Field':
             componentDict[component.name] = {"field":component}
 
-    for key,value in componentDict.items():
-        generateFile(templateFolder,general_form_folder,'formTemplate.html',key,jinja_env,value,"",systemName,".html")   
+    # for key,value in componentDict.items():
+        generateFile(templateFolder,general_form_folder,'formTemplate.html',systemName,jinja_env,componentDict,"",systemName,".html")   
     
 def append(data):
     newA = []

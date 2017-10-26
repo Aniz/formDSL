@@ -2,6 +2,7 @@
 
 Create formulario
     
-add text name 
-add date date 
-add email email
+add text Nome 
+add date Data 
+add email Email
+add int Idade
