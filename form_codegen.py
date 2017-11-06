@@ -72,6 +72,7 @@ def main(debug=False):
 
     # for key,value in componentDict.items():
         generateFile(templateFolder,general_form_folder,'formTemplate.html',systemName,jinja_env,componentDict,"",systemName,".html")   
+        shutil.copy(join(templateFolder,"form.css"),general_form_folder)   
     
 def append(data):
     newA = []

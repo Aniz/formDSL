@@ -9,7 +9,12 @@ FormModel:
 
 Field:  
      'add' type=[FieldType] name=ID
-     ('required' required='1')*
+ 	 (required='required')*
+ 	 ('options:' options*=Option)*';'
+;
+
+Option:
+	name=ID
 ;
 
 FieldType:

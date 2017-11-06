@@ -1,8 +1,43 @@
-//ps:Features having a sensor are automatic
+Create Account
+  
+	add text Name required; 
 
-Create formulario
-    
-add text Nome 
-add date Data 
-add email Email
-add int Idade
+	add comboBox Interests 
+
+	options: Area5
+		
+		Area1
+		
+		Area2
+		
+		Area3
+		
+		Area4;
+		
+	add email Email; 
+
+	add select CivilStatus 
+
+	options: Divorced
+		
+		Single
+		
+		Maried;
+		
+		
+		
+	add textarea Bio; 
+
+	add date Birthday; 
+
+	add radio Genre 
+
+	options:	Male
+		
+		Female;
+		
+	add checkBox SendMeNotifications; 
+
+	add integer Age; 
+
+	add file Photo; 

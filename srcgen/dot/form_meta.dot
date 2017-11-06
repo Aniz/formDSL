@@ -11,37 +11,37 @@
     edge[dir=black,arrowtail=empty]
 
 
-93984136766824 -> 93984136768808[arrowtail=diamond, dir=both, headlabel="fields 0..*"]
-93984136766824[ label="{FormModel|+name:ID\l}"]
+140424187981240 -> 140424187983096[arrowtail=diamond, dir=both, headlabel="fields 0..*"]
+140424187981240[ label="{FormModel|+name:ID\l}"]
 
-93984136774504[ label="{Comment|\\/\\/.*$}"]
+140424187983096 -> 140424187984952[arrowtail=diamond, dir=both, headlabel="options 0..*"]
+140424187983096[ label="{Field|+type:FieldType\l+name:ID\l+required:STRING\l}"]
 
-93984136768808[ label="{Field|+type:FieldType\l+name:ID\lrequired:list[STRING]\l}"]
+140424187984952[ label="{Option|+name:ID\l}"]
 
-93984136770792[ label="{FieldType|text\|int\|date\|select\|check\|email}"]
+140424187986808[ label="{FieldType|text\|int\|date\|select\|check\|email}"]
 
-93984136562792[ label="{BASETYPE|}"]
-93984136562792 -> 93984136559272 [dir=back]
-93984136562792 -> 93984136550296 [dir=back]
-93984136562792 -> 93984136544264 [dir=back]
-93984136562792 -> 93984136547400 [dir=back]
+140424187989240[ label="{Comment|\\/\\/.*$}"]
 
-93984136544264[ label="{ID|}"]
+140424188596072[ label="{ID|}"]
 
-93984136556232[ label="{FLOAT|}"]
+140424188621912[ label="{STRING|}"]
 
-93984136550296[ label="{BOOL|}"]
+140424188623768[ label="{BOOL|}"]
 
-93984136559272[ label="{NUMBER|}"]
-93984136559272 -> 93984136556232 [dir=back]
-93984136559272 -> 93984136553192 [dir=back]
+140424188626424[ label="{INT|}"]
 
-93984136547400[ label="{STRING|}"]
+140424188687752[ label="{FLOAT|}"]
 
-93984136553192[ label="{INT|}"]
+140424188689608[ label="{NUMBER|}"]
+140424188689608 -> 140424188687752 [dir=back]
+140424188689608 -> 140424188626424 [dir=back]
 
-93984136565832[ label="{*OBJECT|}"]
-93984136565832 -> 93984136562792 [dir=back]
+140424188691464[ label="{BASETYPE|}"]
+140424188691464 -> 140424188689608 [dir=back]
+140424188691464 -> 140424188623768 [dir=back]
+140424188691464 -> 140424188596072 [dir=back]
+140424188691464 -> 140424188621912 [dir=back]
 
 
 }

@@ -1,0 +1,57 @@
+<head>
+<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+<div class="main-content">
+<form class="form-labels-on-top" method="post" action="#">
+<div class="form-title-row">
+<h1>Account</h1>
+</div>
+<div class="form-row">
+  	<input placeholder="Name" type="text" name="name" required>
+	</div>
+<div class="form-row">
+	<h3>Interests</h3>
+	<input type="checkBox" value="area5" name="interests">area5
+	<input type="checkBox" value="area1" name="interests">area1
+	<input type="checkBox" value="area2" name="interests">area2
+	<input type="checkBox" value="area3" name="interests">area3
+	<input type="checkBox" value="area4" name="interests">area4
+	</div>
+<div class="form-row">
+  	<input placeholder="Email" type="email" name="email" >
+	</div>
+<div class="form-row">
+	<h3>Civil Status</h3>
+	<div><select name="civilstatus">
+		<option value="divorced">Divorced</option>
+		<option value="single">Single</option>
+		<option value="maried">Maried</option>
+	</select></div>
+	</div>
+<div class="form-row">
+  	<textarea placeholder="Bio"></textarea>
+	</div>
+<div class="form-row">
+	<input placeholder="Birthday" type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="birthday" >
+	</div>
+<div class="form-row">
+	<h3>Genre</h3>
+	<input type="radio" value="genre">Male
+	<input type="radio" value="genre">Female
+	</div>
+<div class="form-row">
+  	Send Me Notifications<input placeholder="Send Me Notifications" type="checkbox" name="sendmenotifications" >
+	</div>
+<div class="form-row">
+  	<input placeholder="Age" type="integer" name="age" >
+	</div>
+<div class="form-row">
+  	<input placeholder="Photo" type="file" name="photo" >
+	</div>
+ <div class="form-row">
+    <button type="submit">Submit Form</button>
+</div>
+</form>
+</div>
+</body>

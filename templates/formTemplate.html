@@ -1,9 +1,47 @@
-<form>
+<head>
+<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+<div class="main-content">
+<form class="form-labels-on-top" method="post" action="#">
+<div class="form-title-row">
+<h1>{{systemName|splitName}}</h1>
+</div>
 {% for k,f in data.items()%}
-	{% if f['field'].type != 'select' %}
-  {{f['field'].name}}
-  <input type="{{f['field'].type}}" name="{{f['field'].name}}">
-{% endif %}
+<div class="form-row">
+	{% if f['field'].options|length == 0 %}
+		{% if f['field'].type == 'textarea' %}
+  	<textarea placeholder="{{f['field'].name|splitName}}"></textarea>
+		{% elif f['field'].type == 'date' %}
+	<input placeholder="{{f['field'].name|splitName}}" type="{{f['field'].type}}" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="{{f['field'].name|lower}}" {% if f['field'].required != "" %}required{% endif %}>
+		{% elif f['field'].type == 'checkBox' %}
+  	{{f['field'].name|splitName}}<input placeholder="{{f['field'].name|splitName}}" type="checkbox" name="{{f['field'].name|lower}}" {% if f['field'].required != "" %}required{% endif %}>
+  		{% else %}
+  	<input placeholder="{{f['field'].name|splitName}}" type="{{f['field'].type}}" name="{{f['field'].name|lower}}" {% if f['field'].required != "" %}required{% endif %}>
+  		{% endif %}
+	{% else %}
+	<h3>{{f['field'].name|splitName}}</h3>
+		{% if f['field'].type == 'select' %}
+	<div><select name="{{f['field'].name|lower}}">
+		{% for k in f['field'].options %}
+		<option value="{{k.name|lower}}">{{k.name|splitName}}</option>
+		{% endfor %}
+	</select></div>
+		{% elif f['field'].type == 'comboBox' %}
+			{% for k in f['field'].options %}
+	<input type="checkBox" value="{{k.name|lower}}" name="{{f['field'].name|lower}}">{{k.name|lower}}
+			{% endfor %}
+		{% else %}
+	 		{% for k in f['field'].options %}
+	<input type="{{f['field'].type}}" value="{{f['field'].name|lower}}">{{k.name|splitName}}
+			{% endfor %}
+		{% endif %}
+	{% endif %}
+	</div>
 {% endfor %}
-<input type="submit" value="Submit">
+ <div class="form-row">
+    <button type="submit">Submit Form</button>
+</div>
 </form>
+</div>
+</body>
