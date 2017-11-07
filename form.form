@@ -36,7 +36,7 @@ Create Account
 		
 		Female;
 		
-	add checkBox SendMeNotifications; 
+	add check SendMeNotifications; 
 
 	add integer Age; 
 
